@@ -9,7 +9,7 @@ RUN apt-get update \
 WORKDIR /app 
 
 # 将当前目录下的所有文件拷贝到工作目录下
-COPY ./app/
+COPY . /app/
 
 # 声明运行时容器提供服务端口
 EXPOSE 80
