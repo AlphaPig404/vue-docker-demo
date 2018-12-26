@@ -19,7 +19,7 @@ EXPOSE 80
 # 3. 将 dist 目录的所有文件拷贝到 nginx 的目录下
 # 4. 删除工作目录的文件，尤其是node_modules以减小镜像体积
 # 由于镜像构建的每一步都会产生新层，为了减少镜像体积，尽可能将一些同类操作，集成到一个步骤中
-RUN npm istall \
+RUN npm install \
     && npm run build \
     && cp -r dist/* /var/www/html \
     && rm -rf /app
