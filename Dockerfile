@@ -2,7 +2,7 @@
 FROM node:6.10.3-slim
 
 # 安装nginx
-FROM apt-get update \ 
+RUN apt-get update \ 
     && apt-get install -y nginx
 
 # 指定工作目录
